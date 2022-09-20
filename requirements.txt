@@ -5,5 +5,3 @@ valispace==0.1.16   # Valispace API
 oct2py==5.3.0       # Python interface to Octave
 pint==0.18          # Python library used for scientific
 scipy==1.7.3        # Python library to define, operate and manipulate physical quantities
-
-# Add other packages here
