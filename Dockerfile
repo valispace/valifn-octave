@@ -21,20 +21,11 @@ SHELL [ "/bin/bash", "-c" ]
 # Stop execution immediately when a command fails
 RUN set -e
 
-# Install some apt packages
+# Install apt-utils package
 RUN \
     apt-get --quiet update && \
-    apt-get --quiet --no-install-recommends --fix-broken --assume-yes install apt-utils 2>&1 | grep -v "debconf: delaying package configuration, since apt-utils is not installed" && \
-    apt-get --quiet --no-install-recommends --fix-broken --assume-yes install apt-transport-https
-# Install some utils packages for later debugging
-RUN \
-    apt-get --quiet update && \
-    apt-get --quiet --no-install-recommends --fix-broken --assume-yes install nano vim git gnupg2 gcc htop procps redis-tools
-# Install some network tools
-RUN \
-    apt-get --quiet update && \
-    apt-get --quiet --no-install-recommends --fix-broken --assume-yes install wget curl ca-certificates software-properties-common
-# Install octave
+    apt-get --quiet --no-install-recommends --fix-broken --assume-yes install apt-utils 2>&1 | grep -v "debconf: delaying package configuration, since apt-utils is not installed"
+# Install octave package
 RUN \
     apt-get --quiet update && \
     apt-get --quiet --no-install-recommends --fix-broken --assume-yes install octave
