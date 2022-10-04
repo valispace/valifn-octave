@@ -1,7 +1,6 @@
-# Valispace packages
-valispace==0.1.16   # Valispace API
-
-# Basic scientifical packages
-oct2py==5.3.0       # Python interface to Octave
-pint==0.18          # Python library used for scientific
-scipy==1.7.3        # Python library to define, operate and manipulate physical quantities
+### Requirements (alphabetical order)
+valispace==0.1.16                               # Valispace API
+### Basic scientifical packages (alphabetical order)
+scipy==1.7.3                                    # Scientific Library for Python
+pint==0.18                                      # Physical quantities module
+oct2py==5.3.0                                   # Python to GNU Octave bridge
