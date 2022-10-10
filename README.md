@@ -2,17 +2,18 @@
 
 ValiFN provides a way to connect and run scripts from [Valispace](https://github.com/valispace) in a safe and isolated environment.
 
-This repository contains code to generate a `octave image` to be used by ValiFn.
-You can add and remove requirements at your will, build the image and replace the original image provided by [Valispace](https://github.com/valispace) using the following instructions.
+This repository contains code to generate an `octave` image to be used by ValiFN.
 
-## How to install new image
+You can add and remove requirements at your will and then build the image and replace the original image provided by [Valispace](https://github.com/valispace) using the following instructions:
 
-1. Clone repository
+## How to install a new image
+
+1. Clone the repository
 ```
 $ git clone https://github.com/valispace/valifn-octave.git
 ```
 
-2. Add/remove packages `requirements.txt`
+2. Add/remove packages to `requirements.txt`
 ```
 # Valispace packages
 valispace>=0.1.16   # Valispace API
@@ -27,10 +28,10 @@ my_new_package==0.0.1
 
 3. Build docker image with tag `valispace/valifn-octave:latest`
 ```
-$ docker build . -t valispace/valifn-octave:latest
+$ docker build --compress --tag valispace/valifn-octave:latest .
 ```
 
-NOTE: If you build image on your deployment server, you can ignore steps 4, 5 and 6.
+NOTE: If you build the image on your deployment server, you can ignore steps 4, 5 and 6.
 
 4. Save image to a file
 ```
@@ -41,20 +42,10 @@ $ docker save valispace/valifn-octave:latest | gzip > valifn-octave.tar.gz
 
 6. Load image to docker
 ```
-$ docker load -i valifn-octave.tar.gz
+$ docker load --input valifn-octave.tar.gz
 ```
 
-7. Thats it! You have now replaced ValiFn Octave Image to match your needs on your deployment. No restart is needed.
-
-
-## Documentation
-
-See the [Wiki](https://github.com/valispace/valifn-octave/wiki) for details on project setup and usage, as also technical details.
-
-
-## Changelog
-
-Detailed changes for each release are documented in the [release notes](https://github.com/valispace/valifn-octave/releases).
+7. That's it! You have now replaced ValiFN Python Image to match your needs on your deployment. No restart is needed.
 
 
 ## Copyright
