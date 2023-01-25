@@ -1,6 +1,6 @@
 # Valispace Octave Image &middot; [![license](https://img.shields.io/github/license/valispace/valifn-octave?style=plastic)](LICENSE) [![issues](https://img.shields.io/github/issues/valispace/valifn-octave?style=plastic)](https://github.com/valispace/valifn-octave/issues) [![pull requests](https://img.shields.io/github/issues-pr/valispace/valifn-octave?style=plastic)](https://github.com/valispace/valifn-octave/pulls) [![release](https://img.shields.io/github/v/release/valispace/valifn-octave?include_prereleases&style=plastic)](https://github.com/valispace/valifn-octave/releases)
 
-This repository serves as the base to generate an `octave` Docker image, that will allow the Valispace Scripting Module to execute `octave` code in a safe and isolated container.
+This repository serves as the base to generate an `octave` Docker image, that will allow the Valispace Scripting Module to execute `octave` code in a safe and isolated Docker container.
 
 You can clone this repository, add your requirements, build the Docker image and then use it in [Valispace](https://github.com/valispace).
 
