@@ -24,7 +24,7 @@ jobs:
 
     uses: ./.github/workflows/builder.yml
     with:
-      branch-name: '${{ github.ref_name }}'
+      branch-name: 'develop'
       update-major-version: false
       update-minor-version: true
       update-patch-version: false
