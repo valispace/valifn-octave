@@ -5,7 +5,14 @@ This repository serves as the base to generate an `octave` Docker image, that wi
 
 ## Documentation
 
-See the [Wiki](https://github.com/valispace/valifn-octave/wiki) for details on usage, templates and troubleshooting.
+See the [Wiki](https://github.com/valispace/valifn-octave/wiki) for details on setup, usage, templates and troubleshooting.
+
+
+## Versioning
+
+[Valispace](https://github.com/valispace) follows the Semantic Versioning Specification (SemVer) defined at [Semantic Versioning.org](https://semver.org/), adapted for our own context.
+
+In short, we name our versions as `major.minor.patch(-(alpha|release-candidate)+(epoch))?`.
 
 
 ## Changelog
