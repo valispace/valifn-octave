@@ -14,10 +14,15 @@ COPY ./ /valifn
 WORKDIR /valifn
 
 RUN set -e && \
-    # Install octave
+    # Install apt-utils
     apt-get --quiet update && \
     apt-get --quiet --no-install-recommends --assume-yes install apt-utils 2>&1 | grep -v "debconf: delaying package configuration, since apt-utils is not installed" && \
+    # Install octave
+    apt-get --quiet update && \
     apt-get --quiet --no-install-recommends --assume-yes install octave && \
+    # Install git
+    apt-get --quiet update && \
+    apt-get --quiet --no-install-recommends --assume-yes install git && \
     # Install python dependencies for the application
     pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir --requirement requirements.txt
