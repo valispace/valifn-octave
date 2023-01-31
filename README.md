@@ -1,47 +1,18 @@
-# ValiFn Octave Image
+# Valispace Octave Image &middot; [![license](https://img.shields.io/github/license/valispace/valifn-octave?style=plastic)](LICENSE) [![release](https://img.shields.io/github/v/release/valispace/valifn-octave?include_prereleases&style=plastic)](https://github.com/valispace/valifn-octave/releases) [![issues](https://img.shields.io/github/issues/valispace/valifn-octave?style=plastic)](https://github.com/valispace/valifn-octave/issues) [![pull requests](https://img.shields.io/github/issues-pr/valispace/valifn-octave?style=plastic)](https://github.com/valispace/valifn-octave/pulls)
 
-ValiFn provides a way to connect and run scripts from Valispace in a safe and isolated environment.
+This repository serves as the base to generate an `octave` Docker image, that will allow the Valispace Scripting Module to execute `octave` code in a safe and isolated Docker container.
 
-This repository contains code to generate a `octave image` to be used by ValiFn.
-You can add and remove requirements at your will, build the image and replace the original image provided by Valispace using the following instructions.
 
-## How to install new image
+## Documentation
 
-1. Clone repository
-```
-$ git clone https://github.com/valispace/valifn-octave.git
-```
+See the [Wiki](https://github.com/valispace/valifn-octave/wiki) for details on usage, templates and troubleshooting.
 
-2. Add/remove packages `requirements.txt`
-```
-# Valispace packages
-valispace>=0.1.16   # Valispace API
 
-# Basic scientifical packages
-pint>=0.18          # Python library used for scientific
-scipy>=1.7.3        # Python library to define, operate and manipulate physical quantities
+## Changelog
 
-# Add other packages here
-my_new_package==0.0.1
-```
+Detailed changes for each release are documented in the [release notes](https://github.com/valispace/valifn-octave/releases).
 
-3. Build docker image with tag `valispace/valifn-octave:latest`
-```
-$ docker build . -t valispace/valifn-octave:latest
-```
 
-NOTE: If you build image on your deployment server, you can ignore steps 4, 5 and 6.
+## Copyright
 
-4. Save image to a file
-```
-$ docker save valispace/valifn-octave:latest | gzip > valifn-octave.tar.gz
-```
-
-5. Copy `valifn-octave.tar.gz` to your destination
-
-6. Load image to docker
-```
-$ docker load -i valifn-octave.tar.gz
-```
-
-7. Thats it! You have now replaced ValiFn Octave Image to match your needs on your deployment. No restart is needed.
+Copyright &copy; 2015-present, [Valispace GmbH](https://www.valispace.com/about-us/)
