@@ -4,6 +4,6 @@ valispace==0.1.16 # Valispace Python API
 # Basic scientifical packages (mandatory)
 oct2py==5.3.0 # Python to GNU Octave bridge
 git+https://git@github.com/valispace/pint.git@0.21.dev0+valispace#egg=pint # Physical quantities module (Valispace version)
-scipy==1.9.3 # Fundamental algorithms for scientific computing in Python
+scipy==1.10.0 # Fundamental algorithms for scientific computing in Python
 
 # Add your packages here (optional)
